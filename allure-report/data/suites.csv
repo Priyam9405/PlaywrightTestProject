@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","14131","@Web Upload-download excel validation","","Sun May 04 15:11:11 IST 2025","passed","Sun May 04 15:11:25 IST 2025","","upload-download.spec.js","",""
+"","10744","@Web Intercepting response call","","Sun May 04 15:11:07 IST 2025","passed","Sun May 04 15:11:18 IST 2025","","NetworkTest.spec.js","",""
+"","20086","@Web Client E2E flow for ADIDAS ORIGINAL","","Sun May 04 15:11:07 IST 2025","passed","Sun May 04 15:11:27 IST 2025","","ClientAppPO.spec.js","",""
+"","6590","@Web Client E2E flow for ZARA COAT 3","","Sun May 04 15:11:27 IST 2025","passed","Sun May 04 15:11:34 IST 2025","","ClientAppPO.spec.js","",""
+"","17615","@Web Test for popups","","Sun May 04 15:11:07 IST 2025","passed","Sun May 04 15:11:24 IST 2025","","TestPopups.spec.js","",""
+"","6824","@Web Intercepting request call","","Sun May 04 15:11:20 IST 2025","passed","Sun May 04 15:11:26 IST 2025","","NetworkTest.spec.js","",""

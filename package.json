@@ -1,0 +1,22 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Regression": "npx playwright test --headed",
+    "webTests": "npx playwright test --grep @Web --headed",
+    "APITests": "npx playwright test --grep '@API' --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "allure-playwright": "^3.2.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
