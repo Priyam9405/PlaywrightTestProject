@@ -1,13 +1,6 @@
 pipeline{
 agent any
-  tools {
-       
-    }
-
-    environment {
-        REPORT_DIR = ""
-    }
-  
+    
 stages {
   stage('Checkout'){
 steps{
