@@ -1,12 +1,11 @@
 pipeline{
 agent any
   tools {
-        maven 'TestMaven'  // Name of Maven from Jenkins Global Tool Configuration
-        jdk 'OpenJDK-17'   // Name of JDK from Jenkins Global Tool Configuration
+       
     }
 
     environment {
-        REPORT_DIR = "target/surefire-reports"
+        REPORT_DIR = ""
     }
   
 stages {
@@ -19,9 +18,8 @@ steps{
   stage('Build & Test') {
     steps {
       echo "Building the project and running tests..."
-withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'TestMaven', mavenSettingsConfig: '', traceability: true) {
-    bat 'mvn clean install'
-}    
+npm install && npx playwright install --with-deps && npm run webTests
+
     }
   }
   stage('Publish Test Results'){
