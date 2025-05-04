@@ -15,38 +15,25 @@ steps{
   checkout scm
     }
     }
-  stage('Build & Test') {
-    steps {
-      echo "Building the project and running tests..."
-npm install && npx playwright install --with-deps && npm run webTests
+  stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
 
-    }
-  }
-  stage('Publish Test Results'){
-steps{
-echo "Publishing JUnit test reports..."
-  junit '**/target/surefire-reports/*.xml'
-  }
-  }
-  stage('Archiving Artifacts'){
-    steps{
-echo "Archiving important build artifacts..."
-    archiveArtifacts artifacts : '**/target/*.jar', fingerprint:true
-    }
-}
-}
-   post {
-        always {
-            echo "Cleaning up workspace..."
-            cleanWs()
+        stage('Install Browsers') {
+            steps {
+                bat 'npx playwright install --with-deps'
+            }
         }
-        success {
-            echo "Build succeeded!"
+
+        stage('Run Tests') {
+            steps {
+                bat 'npx playwright test --reporter=html'
+            }
         }
-        failure {
-            echo "Build failed!"
-        }
-    }
+
+  
 
 
 }
