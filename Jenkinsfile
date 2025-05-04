@@ -22,7 +22,7 @@ steps{
 
         stage('Run Tests') {
             steps {
-                bat 'npx playwright test --reporter=html'
+                bat 'npm run webTests --reporter=html'
             }
         }
 
